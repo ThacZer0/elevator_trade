@@ -486,6 +486,143 @@ svg text { font-family: var(--serif); }
   .doors { display: none; }
 }
 
+/* ---- New exhibits (A) ---- */
+
+/* ============ Exhibits: Pulley Advantage, Hydraulic Lift, Escalator Anatomy ============ */
+.pa-range { width: 100%; accent-color: #c9a35a; }
+.pa-readout { margin: .4em 0 .8em; font-size: .95rem; }
+.pa-block { fill: #6b6153; stroke: #2d2a26; }
+.pa-mark { fill: #a6402a; }
+
+.hy-seg-btn, .es-btn { background: transparent; color: var(--on-enamel); border: 1px solid #c9a35a; padding: 6px 14px; border-radius: 3px; font-family: var(--serif-display); }
+.hy-seg-btn[aria-pressed="true"], .es-btn[aria-pressed="true"] { background: #c9a35a; color: #1c140a; }
+.hy-tank-shell { fill: none; stroke: #2d2a26; stroke-width: 1.5; }
+.hy-oilfill { fill: #b0761e; opacity: .55; }
+#hy-svg.hy-up .hy-pipe { animation: hy-flow .6s linear infinite reverse; }
+#hy-svg.hy-down .hy-pipe { animation: hy-flow .6s linear infinite; }
+@keyframes hy-flow { to { stroke-dashoffset: 20; } }
+
+.es-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
+.es-btn { padding: 5px 10px; font-size: .85rem; text-align: left; }
+.es-watch { margin: 0 0 .6em; font-size: .92rem; color: #e8dcc0; }
+.es-ride { border-left: 4px solid #c9a35a; padding: 4px 10px; margin: .6em 0; }
+.es-truss { fill: rgba(90,66,20,.08); stroke: #8a6a2c; stroke-dasharray: 4 3; }
+.es-small { font-size: 10px; }
+.es-skirt { fill: #cfc7b8; stroke: #8e8576; }
+.es-stepbody { fill: #8e8a83; }
+.es-steps { fill: none; stroke: #2d2a26; stroke-width: 2; }
+.es-chain { fill: none; stroke: #4d4741; stroke-width: 2.5; stroke-dasharray: 3 2; }
+.es-drivechain { stroke: #4d4741; stroke-width: 2.5; stroke-dasharray: 3 2; }
+.es-handrail { fill: none; stroke: #1d1a16; stroke-width: 3.5; }
+.es-comb { fill: #c9a35a; stroke: #5a4214; }
+.es-plate { fill: #6b6153; }
+.es-newel { fill: none; stroke: #6b6153; stroke-width: 2; }
+.es-stop { fill: #d22b1f; stroke: #3d1a10; }
+.es-badge { fill: #fff; stroke: #1c140a; stroke-width: 1.5; }
+.es-badge-n { font-size: 11px; font-weight: 700; fill: #1c140a; pointer-events: none; }
+.es-part { cursor: pointer; transition: opacity .2s; }
+#es-svg.es-sel .es-part:not(.es-on) { opacity: .3; }
+.es-part.es-on .es-badge { fill: #1d5fbf; stroke: #1d5fbf; }
+.es-part.es-on .es-badge-n { fill: #fff; }
+.es-part.es-on path, .es-part.es-on rect, .es-part.es-on line, .es-part.es-on circle:not(.es-badge) { stroke: #1d5fbf; }
+
+/* ---- New exhibits (B) ---- */
+
+/* ============ Exhibits: doors, fire recall, MRL ============ */
+.dr-seg-btn, .mr-seg-btn { background: transparent; color: var(--on-enamel); border: 1px solid #c9a35a; padding: 6px 14px; border-radius: 3px; font-family: var(--serif-display); }
+.dr-seg-btn[aria-pressed="true"], .mr-seg-btn[aria-pressed="true"] { background: #c9a35a; color: #1c140a; }
+.exhibit .brass-btn:disabled { opacity: .5; cursor: not-allowed; }
+
+/* Doors That Watch */
+.dr-inside { fill: #4a4239; }
+.dr-wall { fill: #d9ccb0; }
+.dr-frame { fill: none; stroke: #5a4214; stroke-width: 8; }
+.dr-sill { fill: #8e8576; }
+.dr-panel { fill: #b9b2a5; stroke: #4d4741; stroke-width: 2; }
+.dr-edge { fill: #3d362d; display: none; }
+.dr-strip { fill: #1d1a16; }
+.dr-mode-edge .dr-edge { display: inline; }
+.dr-mode-edge .dr-strip, .dr-mode-edge .dr-beams { display: none; }
+.dr-hit .dr-edge { fill: #a6402a; }
+.dr-beam { stroke: #d24a2a; stroke-width: 1.5; stroke-dasharray: 4 3; opacity: .55; }
+.dr-beam.broken { stroke: #ffb347; stroke-width: 2.5; opacity: 1; stroke-dasharray: none; }
+.dr-person { fill: #1d5f8f; transition: opacity .3s; }
+
+/* Fire Service Recall */
+.fr-warn { margin: 0 0 14px; padding: 10px 14px; background: #8b2b1b; color: #fff6e6; border: 2px solid #ecd08f; border-radius: 4px; font-size: 1.1rem; text-align: center; }
+.fr-bldg { fill: #e6dcc4; stroke: #5a4214; stroke-width: 2; }
+.fr-slab { stroke: #8a6a2c; stroke-width: 1.5; }
+.fr-shaft { fill: rgba(90,66,20,.12); stroke: #8a6a2c; stroke-dasharray: 4 3; }
+.fr-lamp { fill: #d7cdb6; stroke: #5a4214; }
+.fr-lamp.on { fill: #ffb347; }
+.fr-cardoor { fill: #8e8a83; stroke: #4d4741; }
+.fr-smoke circle { fill: #6b6153; opacity: .8; }
+.fr-det { fill: #a6402a; }
+.fr-cop { fill: #2d2a26; stroke: #c9a35a; stroke-width: 2; }
+.fr-hat path { fill: #4d4741; }
+.fr-hat .fr-shield { fill: #2d2a26; }
+.fr-on .fr-hat path { fill: #e8432a; }
+.fr-on .fr-hat .fr-shield { fill: #ffd38a; }
+.fr-cbtn circle { fill: #4d4741; stroke: #8e8a83; }
+.fr-cbtn.on circle { fill: #ffb347; }
+.fr-cbtn.on text { fill: #1c140a; }
+.fr-small { font-size: 10px; }
+#fr-mode { font-size: 8px; letter-spacing: .04em; }
+.fr-pick { font: inherit; margin: 4px 0 10px; padding: 4px 8px; border-radius: 3px; border: 1px solid #c9a35a; background: #f3ead6; color: #1c140a; max-width: 100%; }
+
+/* Machine Room vs. MRL */
+.mr-fig[hidden] { display: none; }
+.mr-wall { stroke: #5a4214; stroke-width: 3; }
+.mr-ctrl { fill: #4d4741; stroke: #1d1a16; }
+.mr-gov-rope { stroke: #6b6153; stroke-width: 1.5; }
+.mr-hl { font-weight: 700; fill: #8b2b1b; paint-order: stroke; stroke: #ffd38a; stroke-width: 5px; stroke-linejoin: round; }
+.mr-ghost { fill: none; stroke: #a6402a; stroke-width: 1.5; stroke-dasharray: 6 4; }
+
+/* ---- New exhibits (C) ---- */
+
+/* ============ Exhibits: Destination Dispatch, Sky Lobby, Rope Weight ============ */
+.dd-mode { background: transparent; color: var(--on-enamel); border: 1px solid #c9a35a; padding: 6px 14px; border-radius: 3px; font-family: var(--serif-display); }
+.dd-mode[aria-pressed="true"] { background: #c9a35a; color: #1c140a; }
+.exhibit .brass-btn:disabled { opacity: .45; cursor: not-allowed; }
+.ex-range { width: 100%; accent-color: #c9a35a; }
+.ex-model { margin: .4em 0; padding: 6px 10px; border-left: 3px solid #c9a35a; font-size: .9rem; color: #f1e6cc; }
+.ex-legend { list-style: none; margin: 8px 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: .9rem; }
+.ex-legend li { display: flex; align-items: center; gap: 6px; }
+.ex-swatch { display: inline-block; width: 16px; height: 12px; border: 1px solid #5a4214; flex: none; }
+
+.dd-table { width: 100%; border-collapse: collapse; font-size: .85rem; margin: 6px 0; }
+.dd-table caption { text-align: left; font-family: var(--serif-display); padding-bottom: 4px; }
+.dd-table th, .dd-table td { border: 1px solid #5a4214; padding: 4px 6px; text-align: left; vertical-align: top; }
+.dd-table thead th, .dd-table tfoot th, .dd-table tfoot td { color: #ecd08f; }
+.dd-floor { stroke: rgba(42,33,24,.25); stroke-width: 1; }
+.dd-shaft { fill: rgba(90,66,20,.08); stroke: #8e8576; stroke-width: 1; }
+.dd-small { font-size: 10px; }
+.dd-car { transition: transform .9s ease-in-out; }
+.dd-instant .dd-car, .dd-instant .dd-rider { transition: none; }
+.dd-stop { fill: #a6402a; }
+.dd-token { fill: #c9a35a; stroke: #5a4214; }
+.dd-rider { transition: opacity .4s; }
+.dd-rider.dd-gone { opacity: .3; }
+.dd-letter { font-size: 10px; font-weight: 700; }
+.dd-plate { fill: #4d4741; stroke: #1d1a16; }
+.dd-arrow { fill: #ffd38a; }
+.dd-screen { fill: #16130f; }
+.dd-screen-text { font-size: 8px; fill: #ffd38a; font-family: "Courier New", monospace; }
+.dd-key { fill: #b9b5ad; }
+
+.sl-bldg { fill: rgba(90,66,20,.08); stroke: #8a6a2c; stroke-width: 1; }
+.sl-local, .sl-sw-local { fill: #c9a35a; background: #c9a35a; }
+.sl-run, .sl-sw-run { fill: #4d4741; background: #4d4741; }
+.sl-lobby { stroke: #a6402a; stroke-width: 2; stroke-dasharray: 5 3; }
+.sl-sw-lobby { background: repeating-linear-gradient(90deg, #a6402a 0 5px, transparent 5px 8px); height: 4px; border: 0; }
+.sl-cap { font-size: 11px; }
+
+.rw-dim { stroke: #2a2118; stroke-width: 1; stroke-dasharray: 3 3; }
+.rw-small { font-size: 10px; }
+.rw-steel, .rw-sw-steel { fill: #3a3a3a; background: #3a3a3a; }
+.rw-cf, .rw-sw-cf { fill: #6f8aa0; background: #6f8aa0; }
+.rw-sw-car { background: #c9a35a; }
+
 </style>
 </head>
 <body>
@@ -885,6 +1022,450 @@ svg text { font-family: var(--serif); }
         <input type="range" id="cw-range" min="0" max="100" value="30" aria-describedby="cw-readout">
         <p id="cw-readout" class="exhibit-status">Car travel 30%, counterweight 70%.</p>
         <div class="btn-row"><button type="button" id="cw-play" class="brass-btn" aria-pressed="false">Run the car</button></div>
+      </div>
+    </div>
+  </section>
+  <section class="exhibit" data-era="ancient" aria-labelledby="pa-title">
+    <h3 id="pa-title">Exhibit: Pulley Advantage</h3>
+    <div class="exhibit-body">
+      <svg id="pa-svg" viewBox="0 0 300 340" role="img" aria-labelledby="pa-svg-title pa-svg-desc">
+        <title id="pa-svg-title">Rope parts sharing a load</title>
+        <desc id="pa-svg-desc">A fixed pulley block hangs from a beam. A rope runs between it and a moving block that carries the load. The more rope parts hold the moving block, the lighter the pull, and the more rope has to be hauled for the same lift.</desc>
+        <rect x="30" y="8" width="240" height="12" class="machine"/>
+        <text x="22" y="54" class="svg-label" id="pa-beam-label">fixed block</text>
+        <g id="pa-fixed"></g>
+        <path id="pa-rope" class="rope" d=""/>
+        <g id="pa-moving"></g>
+        <line id="pa-haul" class="rope" x1="0" y1="0" x2="0" y2="0"/>
+        <rect id="pa-mark" class="pa-mark" x="0" y="0" width="12" height="5"/>
+        <text id="pa-pull-label" class="svg-label" x="0" y="0">pull</text>
+        <line x1="10" y1="330" x2="290" y2="330" class="ground"/>
+      </svg>
+      <div class="exhibit-text">
+        <p>Each rope part that holds up the moving block takes an equal share of the weight. More parts means a lighter pull, but you must haul more rope to lift the load the same distance. You trade distance for force.</p>
+        <label class="slider-label" for="pa-range">Rope parts holding the load: <span id="pa-n">2</span></label>
+        <input type="range" id="pa-range" class="pa-range" min="1" max="6" step="1" value="2" aria-describedby="pa-readout">
+        <p id="pa-readout" class="pa-readout"></p>
+        <div class="btn-row">
+          <button type="button" id="pa-lift" class="brass-btn">Lift the load 1 ft</button>
+          <button type="button" id="pa-reset" class="brass-btn ghost">Reset</button>
+        </div>
+        <p id="pa-status" class="exhibit-status" role="status" aria-live="polite">Load resting. Move the slider to change the number of rope parts.</p>
+        <p class="fine">Example numbers (600 lb load, 1 ft lift) are illustrative and ideal, ignoring friction. This is the same arithmetic as elevator roping ratios (1:1, 2:1): a 2:1 roped car moves half as far as the rope is pulled at the sheave, and each rope carries half the load.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit" data-era="muscle" aria-labelledby="hy-title">
+    <h3 id="hy-title">Exhibit: Hydraulic Lift</h3>
+    <div class="seg" role="group" aria-label="Choose a hydraulic layout">
+      <button type="button" class="hy-seg-btn" data-hy="direct" aria-pressed="true">Direct-acting</button>
+      <button type="button" class="hy-seg-btn" data-hy="roped" aria-pressed="false">Roped (1:2)</button>
+    </div>
+    <div class="exhibit-body">
+      <svg id="hy-svg" viewBox="0 0 300 340" role="img" aria-labelledby="hy-svg-title hy-svg-desc">
+        <title id="hy-svg-title">Hydraulic elevator</title>
+        <desc id="hy-svg-desc"></desc>
+        <g id="hy-direct">
+          <line x1="36" y1="10" x2="36" y2="230" class="rail-line"/><line x1="124" y1="10" x2="124" y2="230" class="rail-line"/>
+          <rect x="66" y="228" width="28" height="110" class="cylinder"/>
+          <rect id="hy-coil-d" x="67" y="334" width="26" height="4" class="hy-oilfill"/>
+          <path id="hy-pipe-d" d="M259 216 L259 300 L94 300" class="oil hy-pipe"/>
+          <g id="hy-move-d">
+            <rect x="72" y="226" width="16" height="108" class="plunger"/>
+            <rect x="40" y="162" width="80" height="64" class="car"/>
+            <text x="80" y="198" class="svg-label" text-anchor="middle">car</text>
+          </g>
+          <line x1="10" y1="230" x2="290" y2="230" class="ground"/>
+          <text x="100" y="270" class="svg-label">cylinder</text>
+          <text x="100" y="250" class="svg-label">plunger</text>
+          <rect x="180" y="170" width="110" height="56" class="room"/>
+          <text x="184" y="164" class="svg-label">pump unit</text>
+          <rect x="188" y="186" width="42" height="36" class="hy-tank-shell"/>
+          <rect id="hy-toil-d" x="189" y="187" width="40" height="34" class="tank"/>
+          <text x="209" y="208" class="svg-label inv" text-anchor="middle">tank</text>
+          <rect x="236" y="178" width="46" height="18" class="machine"/>
+          <text x="259" y="191" class="svg-label inv" text-anchor="middle">pump</text>
+          <rect x="240" y="204" width="38" height="12" class="valve"/>
+          <text x="259" y="244" class="svg-label" text-anchor="middle">valve</text>
+        </g>
+        <g id="hy-roped" display="none">
+          <line x1="26" y1="10" x2="26" y2="330" class="rail-line"/><line x1="104" y1="10" x2="104" y2="330" class="rail-line"/>
+          <rect x="130" y="160" width="20" height="170" class="cylinder"/>
+          <rect id="hy-coil-r" x="131" y="316" width="18" height="14" class="hy-oilfill"/>
+          <path id="hy-pipe-r" d="M259 216 L259 318 L150 318" class="oil hy-pipe"/>
+          <line id="hy-rope-l" x1="126" y1="146" x2="126" y2="322" class="rope"/>
+          <line id="hy-rope-r" x1="154" y1="146" x2="154" y2="324" class="rope"/>
+          <rect x="148" y="322" width="12" height="8" class="hub"/>
+          <g id="hy-car-r">
+            <rect x="30" y="266" width="70" height="60" class="car"/>
+            <line x1="100" y1="322" x2="128" y2="322" class="shaft"/>
+            <text x="65" y="300" class="svg-label" text-anchor="middle">car</text>
+          </g>
+          <g id="hy-jack-r">
+            <rect x="135" y="146" width="10" height="170" class="plunger"/>
+            <circle cx="140" cy="146" r="14" class="sheave"/><circle cx="140" cy="146" r="3" class="hub"/>
+            <text x="160" y="140" class="svg-label">sheave on plunger</text>
+          </g>
+          <line x1="10" y1="330" x2="290" y2="330" class="ground"/>
+          <text x="164" y="236" class="svg-label">cylinder</text>
+          <text x="164" y="308" class="svg-label">anchor (pit)</text>
+          <rect x="180" y="170" width="110" height="56" class="room"/>
+          <text x="184" y="164" class="svg-label">pump unit</text>
+          <rect x="188" y="186" width="42" height="36" class="hy-tank-shell"/>
+          <rect id="hy-toil-r" x="189" y="187" width="40" height="34" class="tank"/>
+          <text x="209" y="208" class="svg-label inv" text-anchor="middle">tank</text>
+          <rect x="236" y="178" width="46" height="18" class="machine"/>
+          <text x="259" y="191" class="svg-label inv" text-anchor="middle">pump</text>
+          <rect x="240" y="204" width="38" height="12" class="valve"/>
+        </g>
+      </svg>
+      <div class="exhibit-text">
+        <p>Pumping fluid into a cylinder pushes a long rod, the plunger, upward, and the car rises with it. To come down, a valve opens and the car's own weight pushes the fluid back to the tank. The pump only works on the way up.</p>
+        <div class="btn-row">
+          <button type="button" id="hy-pump" class="brass-btn">Pump (up)</button>
+          <button type="button" id="hy-lower" class="brass-btn">Lower (valve open)</button>
+          <button type="button" id="hy-stop" class="brass-btn ghost">Stop</button>
+        </div>
+        <p id="hy-readout" class="pa-readout"></p>
+        <p id="hy-status" class="exhibit-status" role="status" aria-live="polite">Car at the bottom landing. Pump off, valves closed.</p>
+        <p class="fine">Armstrong's era (see 1846) worked with pressurised water; today's hydraulic elevators use oil. Travel figures are illustrative. Direct-acting: the car moves exactly as far as the plunger, so a single-stage plunger must be as long as the car's travel. Roped 1:2: ropes dead-ended in the pit pass over the sheave on the plunger to the car, so the car moves twice the plunger travel at twice its speed, and the plunger carries both rope parts, about twice the suspended load.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit" data-era="electric" aria-labelledby="es-title">
+    <h3 id="es-title">Exhibit: Escalator Anatomy</h3>
+    <div class="exhibit-body">
+      <svg id="es-svg" viewBox="0 0 360 240" role="img" aria-labelledby="es-svg-title es-svg-desc">
+        <title id="es-svg-title">Side cut-away of a modern step escalator</title>
+        <desc id="es-svg-desc">A simplified side view, not to scale. Steps run up an incline between a lower and an upper landing, linked by a step chain that loops around sprockets. The drive machine and brake sit in the machine space under the upper landing. A handrail loops around a rounded newel at each end. Comb plates sit where the steps meet each landing, skirt panels line the sides of the steps, and an emergency stop button is at each end.</desc>
+        <path d="M40 182 L40 234 L110 234 L330 107 L356 107 L356 78" class="es-truss"/>
+        <rect x="290" y="78" width="66" height="46" class="room"/>
+        <text x="352" y="134" class="svg-label es-small" text-anchor="end">machine space</text>
+        <line x1="0" y1="180" x2="62" y2="180" class="ground"/>
+        <line x1="296" y1="76" x2="360" y2="76" class="ground"/>
+        <text x="2" y="196" class="svg-label es-small">lower landing</text>
+        <text x="358" y="70" class="svg-label es-small" text-anchor="end">upper landing</text>
+
+        <g class="es-part" data-part="skirt">
+          <path d="M62 180 L96 180 L276 76 L296 76 L296 60 L276 60 L96 164 L62 164 Z" class="es-skirt"/>
+          <circle cx="244" cy="90" r="9" class="es-badge"/><text x="244" y="94" class="es-badge-n" text-anchor="middle">6</text>
+        </g>
+        <g class="es-part" data-part="chain">
+          <path d="M60 200 L100 200 L280 96 L300 96 A10 10 0 0 1 300 116 L280 116 L100 220 L60 220 A10 10 0 0 1 60 200 Z" class="es-chain"/>
+          <circle cx="60" cy="210" r="9" class="sheave"/><circle cx="300" cy="106" r="9" class="sheave"/>
+          <circle cx="190" cy="150" r="9" class="es-badge"/><text x="190" y="154" class="es-badge-n" text-anchor="middle">2</text>
+        </g>
+        <g class="es-part" data-part="steps">
+          <path d="M66 180 L96 180 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 L292 76 L292 90 L280 90 L100 194 L66 194 Z" class="es-stepbody"/>
+          <path d="M66 180 L96 180 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 l0 -10.39 l18 0 L292 76" class="es-steps"/>
+          <circle cx="208" cy="130" r="9" class="es-badge"/><text x="208" y="134" class="es-badge-n" text-anchor="middle">1</text>
+        </g>
+        <g class="es-part" data-part="machine">
+          <line x1="300" y1="106" x2="320" y2="96" class="es-drivechain"/>
+          <rect x="310" y="84" width="28" height="16" class="machine"/>
+          <rect x="338" y="86" width="10" height="12" class="valve"/>
+          <circle cx="330" cy="114" r="9" class="es-badge"/><text x="330" y="118" class="es-badge-n" text-anchor="middle">3</text>
+        </g>
+        <g class="es-part" data-part="handrail">
+          <path d="M50 144 L96 144 L276 40 L316 40 A8 8 0 0 1 316 56 L276 56 L96 160 L50 160 A8 8 0 0 1 50 144 Z" class="es-handrail"/>
+          <circle cx="190" cy="112" r="6" class="sheave"/>
+          <circle cx="140" cy="102" r="9" class="es-badge"/><text x="140" y="106" class="es-badge-n" text-anchor="middle">4</text>
+        </g>
+        <g class="es-part" data-part="comb">
+          <path d="M56 180 L66 180 L66 177 Z M290 76 L300 76 L290 73 Z" class="es-comb"/>
+          <rect x="54" y="178" width="12" height="4" class="es-comb"/><rect x="290" y="74" width="12" height="4" class="es-comb"/>
+          <circle cx="76" cy="168" r="9" class="es-badge"/><text x="76" y="172" class="es-badge-n" text-anchor="middle">5</text>
+        </g>
+        <g class="es-part" data-part="landing">
+          <rect x="18" y="180" width="38" height="5" class="es-plate"/><rect x="302" y="76" width="40" height="5" class="es-plate"/>
+          <circle cx="48" cy="152" r="11" class="es-newel"/><circle cx="318" cy="48" r="11" class="es-newel"/>
+          <circle cx="22" cy="164" r="9" class="es-badge"/><text x="22" y="168" class="es-badge-n" text-anchor="middle">7</text>
+        </g>
+        <g class="es-part" data-part="estop">
+          <circle cx="40" cy="172" r="4" class="es-stop"/><circle cx="330" cy="68" r="4" class="es-stop"/>
+          <circle cx="346" cy="54" r="9" class="es-badge"/><text x="346" y="58" class="es-badge-n" text-anchor="middle">8</text>
+        </g>
+      </svg>
+      <div class="exhibit-text">
+        <p>An escalator is a loop of steps pulled by chains. Up top, a motor turns the loop; at each end the steps flatten so you can step on and off. Pick a part to see what it does and what watches over it.</p>
+        <div class="es-list" role="group" aria-label="Escalator parts">
+          <button type="button" class="es-btn" data-part="steps" aria-pressed="false">1 Steps</button>
+          <button type="button" class="es-btn" data-part="chain" aria-pressed="false">2 Step chain</button>
+          <button type="button" class="es-btn" data-part="machine" aria-pressed="false">3 Drive machine &amp; brake</button>
+          <button type="button" class="es-btn" data-part="handrail" aria-pressed="false">4 Handrail &amp; drive</button>
+          <button type="button" class="es-btn" data-part="comb" aria-pressed="false">5 Comb plates</button>
+          <button type="button" class="es-btn" data-part="skirt" aria-pressed="false">6 Skirt panels</button>
+          <button type="button" class="es-btn" data-part="landing" aria-pressed="false">7 Landing plates &amp; newels</button>
+          <button type="button" class="es-btn" data-part="estop" aria-pressed="false">8 Emergency stop</button>
+        </div>
+        <div role="status" aria-live="polite">
+          <p id="es-what" class="exhibit-status">Select a part.</p>
+          <p id="es-watch" class="es-watch"></p>
+        </div>
+        <p class="es-ride"><strong>Riding safely:</strong> stand facing forward, hold the handrail, keep your feet away from the sides, and step off promptly at the end.</p>
+        <p class="fine">Simplified drawing, not to scale. Reno's 1890s machines were moving inclines; step escalators with level landings followed. Device names follow common North American (ASME A17.1/CSA B44) and European (EN 115) usage; which devices are required, and where they sit, depends on the code edition and the manufacturer.</p>
+      </div>
+    </div>
+  </section>
+  <section class="exhibit" data-era="auto" aria-labelledby="dr-title">
+    <h3 id="dr-title">Exhibit: Doors That Watch</h3>
+    <div class="seg" role="group" aria-label="Choose a door protection device">
+      <button type="button" class="dr-seg-btn" data-dr-mode="curtain" aria-pressed="true">Light curtain</button>
+      <button type="button" class="dr-seg-btn" data-dr-mode="edge" aria-pressed="false">Safety edge</button>
+    </div>
+    <div class="exhibit-body">
+      <svg id="dr-svg" viewBox="0 0 300 300" role="img" aria-labelledby="dr-svg-title dr-svg-desc">
+        <title id="dr-svg-title">Elevator doors with a reopening device</title>
+        <desc id="dr-svg-desc">Front view of a center-opening elevator entrance. The car door and landing door close together. When a person steps into the opening, the doors stop and reopen. A light curtain senses the person with beams of light before the doors touch; a mechanical safety edge reopens the doors when it touches the person.</desc>
+        <rect x="60" y="50" width="180" height="210" class="dr-inside"/>
+        <g id="dr-left">
+          <rect x="60" y="50" width="90" height="210" class="dr-panel"/>
+          <rect x="145" y="50" width="5" height="210" class="dr-edge"/>
+          <rect x="145" y="50" width="5" height="210" class="dr-strip"/>
+        </g>
+        <g id="dr-right">
+          <rect x="150" y="50" width="90" height="210" class="dr-panel"/>
+          <rect x="150" y="50" width="5" height="210" class="dr-edge"/>
+          <rect x="150" y="50" width="5" height="210" class="dr-strip"/>
+        </g>
+        <g id="dr-beams" class="dr-beams"></g>
+        <g id="dr-person" class="dr-person" opacity="0">
+          <circle cx="150" cy="104" r="15"/>
+          <path d="M128 260 L128 172 Q128 126 150 126 Q172 126 172 172 L172 260 Z"/>
+        </g>
+        <rect x="0" y="0" width="60" height="300" class="dr-wall"/>
+        <rect x="240" y="0" width="60" height="300" class="dr-wall"/>
+        <rect x="0" y="0" width="300" height="50" class="dr-wall"/>
+        <rect x="56" y="46" width="188" height="214" class="dr-frame"/>
+        <rect x="50" y="260" width="200" height="10" class="dr-sill"/>
+        <line x1="0" y1="270" x2="300" y2="270" class="ground"/>
+        <text x="150" y="30" class="svg-label" text-anchor="middle">car door and landing door move together</text>
+        <text id="dr-label" x="150" y="288" class="svg-label" text-anchor="middle">light curtain: beams across the doorway</text>
+      </svg>
+      <div class="exhibit-text">
+        <p>Elevator doors close on their own, so they need a way to notice people. A <strong>safety edge</strong> is a strip on the door that gets pushed in when it touches someone. A <strong>light curtain</strong> shines rows of invisible light across the doorway; if anything blocks a beam, the doors reopen before they touch you.</p>
+        <p>Doors that could watch the doorway themselves were one of the changes that let elevators run without an attendant in the car.</p>
+        <div class="btn-row">
+          <button type="button" id="dr-step" class="brass-btn">Step into the doorway</button>
+          <button type="button" id="dr-reset" class="brass-btn ghost">Reset</button>
+        </div>
+        <p id="dr-status" class="exhibit-status" role="status" aria-live="polite">Doors open. Light curtain watching the doorway.</p>
+        <p class="fine">Simplified: real light curtains use many more beams, and many cars combine a curtain with other sensing. Codes require a reopening device on automatic power-operated passenger doors, and they also limit door closing force and kinetic energy. The device is on the car door; the landing door is driven through the door coupling, so both reverse together.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit" data-era="auto" aria-labelledby="fr-title">
+    <h3 id="fr-title">Exhibit: Fire Service Recall</h3>
+    <p class="fr-warn"><strong>In a fire, do not use the elevators — use the stairs.</strong></p>
+    <div class="exhibit-body">
+      <svg id="fr-svg" viewBox="0 0 320 340" role="img" aria-labelledby="fr-svg-title fr-svg-desc">
+        <title id="fr-svg-title">Eight-storey building with one elevator</title>
+        <desc id="fr-svg-desc">A building cut-away with eight floors and one elevator car. When a smoke detector trips, call lights go out, the car returns non-stop to the recall floor, opens its doors and parks, and a firefighter's hat symbol lights inside the car.</desc>
+        <rect x="20" y="32" width="180" height="288" class="fr-bldg"/>
+        <g id="fr-floors"></g>
+        <rect x="110" y="32" width="32" height="288" class="fr-shaft"/>
+        <g id="fr-smoke" class="fr-smoke" opacity="0">
+          <circle cx="86" cy="0" r="7"/><circle cx="96" cy="-3" r="9"/><circle cx="104" cy="0" r="6"/>
+          <rect x="90" y="-17" width="12" height="4" class="fr-det"/>
+        </g>
+        <g id="fr-car">
+          <rect x="113" y="0" width="26" height="32" class="car"/>
+          <rect id="fr-door-l" x="114" y="3" width="12" height="28" class="fr-cardoor"/>
+          <rect id="fr-door-r" x="126" y="3" width="12" height="28" class="fr-cardoor"/>
+        </g>
+        <rect x="220" y="32" width="94" height="170" rx="4" class="fr-cop"/>
+        <text x="267" y="48" class="svg-label inv" text-anchor="middle">inside the car</text>
+        <g id="fr-hat" class="fr-hat">
+          <path d="M246 84 Q246 60 267 60 Q288 60 288 84 Z"/>
+          <path d="M238 84 L296 84 L292 90 L242 90 Z"/>
+          <rect x="261" y="64" width="12" height="12" rx="2" class="fr-shield"/>
+        </g>
+        <g id="fr-buttons"></g>
+        <text id="fr-mode" x="267" y="194" class="svg-label inv" text-anchor="middle">NORMAL SERVICE</text>
+        <line x1="10" y1="320" x2="314" y2="320" class="ground"/>
+      </svg>
+      <div class="exhibit-text">
+        <p>When a smoke detector in an elevator lobby, the hoistway or the machine room trips, the elevator stops answering calls and goes straight to a safe floor chosen by the building, called the recall floor. There it opens its doors and waits for firefighters. Nobody can call it away.</p>
+        <label class="slider-label" for="fr-pick">Smoke detector on floor</label>
+        <select id="fr-pick" class="fr-pick"></select>
+        <div class="btn-row">
+          <button type="button" id="fr-floor-btn" class="brass-btn">Smoke detected on floor 5</button>
+          <button type="button" id="fr-lobby-btn" class="brass-btn">Smoke detected in the main lobby</button>
+          <button type="button" id="fr-reset" class="brass-btn ghost">Reset</button>
+        </div>
+        <p id="fr-status" class="exhibit-status" role="status" aria-live="polite">Normal service: the car is answering calls.</p>
+        <p>After recall, firefighters can run the car from inside with a special key (called Phase II). That is only for trained firefighters.</p>
+        <p class="fine">Simplified; requirements vary by code edition and jurisdiction (ASME A17.1 / CSA B44). Phase I: hall and car calls are cancelled; a car travelling away from the recall floor reverses at or before the next landing without opening its doors; it returns non-stop to the designated landing, or to the alternate landing if the first detector to trip is at the designated landing; doors open and the car parks out of normal service with the firefighter's hat signal lit. This page explains the behaviour; it is not a test or service procedure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit" data-era="digital" aria-labelledby="mr-title">
+    <h3 id="mr-title">Exhibit: Machine Room vs. Machine-Room-Less</h3>
+    <div class="seg" role="group" aria-label="Choose an elevator layout">
+      <button type="button" class="mr-seg-btn" data-mr-fig="room" aria-pressed="true">Machine room</button>
+      <button type="button" class="mr-seg-btn" data-mr-fig="mrl" aria-pressed="false">Machine-room-less</button>
+    </div>
+    <div class="exhibit-body">
+      <div class="mr-figs">
+        <svg class="mr-fig" data-mr-fig="room" viewBox="0 0 260 340" role="img" aria-labelledby="mr-room-title mr-room-desc">
+          <title id="mr-room-title">Traction elevator with a machine room</title>
+          <desc id="mr-room-desc">A machine room sits on the roof above the hoistway. It holds the hoisting machine, the controller and the governor. Ropes drop through the floor to the car and counterweight below.</desc>
+          <rect x="40" y="6" width="180" height="76" class="room"/>
+          <text x="46" y="20" class="svg-label">machine room</text>
+          <circle cx="126" cy="54" r="22" class="sheave"/><circle cx="126" cy="54" r="4" class="hub"/>
+          <rect x="152" y="44" width="30" height="20" class="machine"/>
+          <rect x="190" y="30" width="22" height="48" class="mr-ctrl"/>
+          <circle cx="52" cy="62" r="6" class="sheave"/><circle cx="52" cy="62" r="2" class="hub"/>
+          <text x="170" y="40" class="svg-label mr-hl" text-anchor="middle">machine</text>
+          <text x="200" y="24" class="svg-label mr-hl" text-anchor="middle">controller</text>
+          <text x="62" y="48" class="svg-label mr-hl" text-anchor="middle">governor</text>
+          <line x1="0" y1="82" x2="260" y2="82" class="ground"/>
+          <text x="256" y="78" class="svg-label" text-anchor="end">roof</text>
+          <line x1="40" y1="82" x2="40" y2="320" class="mr-wall"/><line x1="220" y1="82" x2="220" y2="320" class="mr-wall"/>
+          <line x1="104" y1="54" x2="104" y2="160" class="rope"/>
+          <line x1="148" y1="54" x2="148" y2="230" class="rope"/>
+          <line x1="46" y1="62" x2="46" y2="306" class="mr-gov-rope"/><line x1="58" y1="62" x2="58" y2="306" class="mr-gov-rope"/>
+          <line x1="68" y1="82" x2="68" y2="316" class="rail-line"/><line x1="164" y1="82" x2="164" y2="316" class="rail-line"/>
+          <rect x="72" y="160" width="64" height="70" class="car"/>
+          <text x="104" y="200" class="svg-label" text-anchor="middle">car</text>
+          <rect x="138" y="230" width="20" height="50" class="cw"/>
+          <line x1="20" y1="320" x2="240" y2="320" class="ground"/>
+          <text x="226" y="314" class="svg-label">pit</text>
+        </svg>
+        <svg class="mr-fig" data-mr-fig="mrl" viewBox="0 0 260 340" role="img" aria-labelledby="mr-mrl-title mr-mrl-desc" hidden>
+          <title id="mr-mrl-title">Machine-room-less traction elevator</title>
+          <desc id="mr-mrl-desc">No machine room on the roof. A compact machine is mounted inside the hoistway near the top, the governor is in the hoistway, and the controller is commonly in a cabinet beside the top landing door.</desc>
+          <rect x="40" y="6" width="180" height="76" class="mr-ghost"/>
+          <text x="130" y="40" class="svg-label" text-anchor="middle">no machine room:</text>
+          <text x="130" y="54" class="svg-label" text-anchor="middle">space freed</text>
+          <line x1="0" y1="82" x2="260" y2="82" class="ground"/>
+          <text x="256" y="78" class="svg-label" text-anchor="end">roof</text>
+          <line x1="40" y1="82" x2="40" y2="320" class="mr-wall"/><line x1="220" y1="82" x2="220" y2="320" class="mr-wall"/>
+          <rect x="144" y="98" width="28" height="16" class="machine"/>
+          <circle cx="120" cy="108" r="22" class="sheave"/><circle cx="120" cy="108" r="3" class="hub"/>
+          <circle cx="52" cy="96" r="6" class="sheave"/><circle cx="52" cy="96" r="2" class="hub"/>
+          <line x1="98" y1="108" x2="98" y2="170" class="rope"/>
+          <line x1="142" y1="108" x2="142" y2="236" class="rope"/>
+          <line x1="46" y1="96" x2="46" y2="306" class="mr-gov-rope"/><line x1="58" y1="96" x2="58" y2="306" class="mr-gov-rope"/>
+          <line x1="68" y1="82" x2="68" y2="316" class="rail-line"/><line x1="158" y1="82" x2="158" y2="316" class="rail-line"/>
+          <rect x="72" y="170" width="52" height="70" class="car"/>
+          <text x="98" y="210" class="svg-label" text-anchor="middle">car</text>
+          <rect x="132" y="236" width="20" height="50" class="cw"/>
+          <line x1="220" y1="160" x2="260" y2="160" class="ground"/>
+          <rect x="230" y="104" width="22" height="54" class="mr-ctrl"/>
+          <text x="256" y="174" class="svg-label" text-anchor="end">top landing</text>
+          <text x="170" y="128" class="svg-label mr-hl" text-anchor="middle">machine</text>
+          <text x="210" y="97" class="svg-label mr-hl" text-anchor="middle">controller</text>
+          <text x="62" y="121" class="svg-label mr-hl" text-anchor="middle">governor</text>
+          <line x1="20" y1="320" x2="240" y2="320" class="ground"/>
+          <text x="226" y="314" class="svg-label">pit</text>
+        </svg>
+      </div>
+      <div class="exhibit-text">
+        <p id="mr-caption" role="status" aria-live="polite"></p>
+        <p class="fine">Simplified: roping is drawn 1:1, and many machine-room-less designs use other roping or place equipment elsewhere in the hoistway. With the machine, brake and governor inside the hoistway, mechanics service them from the car top, the pit or work platforms, so work at height, fall protection, control of car movement and safe hoistway access become central to the job; codes add requirements for working spaces and access to this equipment.</p>
+      </div>
+    </div>
+  </section>
+  <section class="exhibit" data-era="digital" aria-labelledby="dd-title">
+    <h3 id="dd-title">Exhibit: Destination Dispatch</h3>
+    <div class="seg" role="group" aria-label="Choose how riders call a car">
+      <button type="button" class="dd-mode" data-mode="conv" aria-pressed="true">Up button (conventional)</button>
+      <button type="button" class="dd-mode" data-mode="dest" aria-pressed="false">Destination keypad</button>
+    </div>
+    <div class="exhibit-body">
+      <svg id="dd-svg" viewBox="0 0 320 340" role="img" aria-labelledby="dd-svg-title dd-svg-desc">
+        <title id="dd-svg-title">Three elevators, twelve floors, nine riders in the lobby</title>
+        <desc id="dd-svg-desc">A 12-floor building with three elevator cars, A, B and C, at the lobby. Below, nine riders wait, each marked with the floor they want. When the cars run, a dot marks every floor where a car stops.</desc>
+        <g id="dd-floors"></g>
+        <g id="dd-marks"></g>
+        <g id="dd-cars"></g>
+        <g id="dd-device"></g>
+        <rect x="4" y="258" width="312" height="78" class="room"/>
+        <text x="10" y="272" class="svg-label">Lobby (floor 1): the floor each rider wants</text>
+        <g id="dd-riders"></g>
+      </svg>
+      <div class="exhibit-text">
+        <p>Nine people arrive in the lobby together. With an <strong>up button</strong>, everyone piles into whichever car comes first, so each car stops for a mix of floors. With a <strong>destination keypad</strong>, each person types their floor first and is told which car to take, so people going to nearby floors ride together and the cars make fewer stops.</p>
+        <div class="btn-row">
+          <button type="button" id="dd-run" class="brass-btn">Run the cars</button>
+          <button type="button" id="dd-step" class="brass-btn ghost">One step</button>
+          <button type="button" id="dd-reset" class="brass-btn ghost">Reset</button>
+        </div>
+        <p id="dd-status" class="exhibit-status" role="status" aria-live="polite"></p>
+        <table class="dd-table">
+          <caption>Stops per car (fills in after each run)</caption>
+          <thead><tr><th scope="col">Car</th><th scope="col">Up button</th><th scope="col">Keypad</th></tr></thead>
+          <tbody id="dd-tbody"></tbody>
+          <tfoot><tr><th scope="row">Total</th><td id="dd-total-conv">&ndash;</td><td id="dd-total-dest">&ndash;</td></tr></tfoot>
+        </table>
+        <p class="ex-model">Simplified model &mdash; real systems weigh many more factors. Here each car takes three riders, all three cars leave together, and only upward stops are counted.</p>
+        <p class="fine">Destination dispatch arrived with Schindler's Miconic 10 (c. 1990&ndash;92): a keypad in the lobby replaces the up/down hall buttons, and a display tells each rider which car to take. Because the controller knows each destination before anyone boards, it can group riders bound for nearby floors in the same car.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit" data-era="super" aria-labelledby="sl-title">
+    <h3 id="sl-title">Exhibit: The Sky Lobby</h3>
+    <div class="exhibit-body">
+      <svg id="sl-svg" viewBox="0 0 320 340" role="img" aria-labelledby="sl-svg-title sl-svg-desc">
+        <title id="sl-svg-title">Elevator shafts in a tall building, two ways</title>
+        <desc id="sl-svg-desc">Two side views of the same building. On the left, every elevator runs up from the ground, so the shafts pile up at the bottom. On the right, big express cars run to sky lobbies, and local elevators above each sky lobby are stacked in the same shafts as the ones below, so far fewer shafts reach the ground.</desc>
+        <g id="sl-draw"></g>
+        <line x1="4" y1="316" x2="316" y2="316" class="ground"/>
+        <text x="82" y="332" class="svg-label sl-cap" text-anchor="middle">Every car from ground</text>
+        <text x="238" y="332" class="svg-label sl-cap" text-anchor="middle">Express + sky lobbies</text>
+      </svg>
+      <div class="exhibit-text">
+        <p>Every elevator needs its own shaft, and a shaft takes floor space on every floor it passes. If every car starts at the ground, a tall building loses much of its lower floors to shafts. With <strong>sky lobbies</strong>, big express cars carry people non-stop up to a transfer floor, where they change to local cars. Locals above and below a sky lobby can share the same shaft, one stacked over the other.</p>
+        <label class="slider-label" for="sl-range">Building height: <span id="sl-floors-out">60</span> floors</label>
+        <input type="range" id="sl-range" class="ex-range" min="30" max="120" step="5" value="60" aria-describedby="sl-status">
+        <ul class="ex-legend">
+          <li><span class="ex-swatch sl-sw-local"></span>Local car serving floors</li>
+          <li><span class="ex-swatch sl-sw-run"></span>Shaft passing floors without stopping</li>
+          <li><span class="ex-swatch sl-sw-lobby"></span>Sky lobby (change cars here)</li>
+        </ul>
+        <p id="sl-status" class="exhibit-status" role="status" aria-live="polite"></p>
+        <p class="ex-model">Simplified model with assumed values: each local group serves about 15 floors with 4 cars; each sky lobby section covers about 30 floors and gets 2 express shafts. Real buildings vary widely.</p>
+        <p class="fine">Express shuttles run non-stop from the main lobby to a sky lobby; riders transfer there to local cars for their zone. Stacking the local zones puts several groups in one shaft position, one above another. The World Trade Center (1970&ndash;73) made this famous, with sky lobbies on the 44th and 78th floors; Chicago's John Hancock Center (1969) also used a sky lobby.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibit" data-era="super" aria-labelledby="rw-title">
+    <h3 id="rw-title">Exhibit: Why Rope Weight Limits Height</h3>
+    <div class="exhibit-body">
+      <svg id="rw-svg" viewBox="0 0 320 340" role="img" aria-labelledby="rw-svg-title rw-svg-desc">
+        <title id="rw-svg-title">Rope weight compared with car weight</title>
+        <desc id="rw-svg-desc">On the left, a car hangs at the bottom of a hoistway from ropes over a drive sheave; the taller the rise, the longer the rope. On the right, two bars compare what hangs from the sheave: car plus load, with steel rope on one bar and carbon-fibre rope on the other.</desc>
+        <line x1="10" y1="322" x2="120" y2="322" class="ground"/>
+        <line x1="34" y1="14" x2="34" y2="322" class="rail-line"/><line x1="96" y1="14" x2="96" y2="322" class="rail-line"/>
+        <line id="rw-rope" x1="65" y1="30" x2="65" y2="290" class="rope"/>
+        <circle cx="65" cy="22" r="14" class="sheave"/><circle cx="65" cy="22" r="3" class="hub"/>
+        <rect id="rw-car" x="42" y="290" width="46" height="28" class="car"/>
+        <text x="65" y="309" class="svg-label" text-anchor="middle">car</text>
+        <line id="rw-dim" x1="118" y1="22" x2="118" y2="290" class="rw-dim"/>
+        <text id="rw-dim-label" x="122" y="160" class="svg-label rw-small">rise</text>
+        <g id="rw-bars"></g>
+        <text x="183" y="334" class="svg-label" text-anchor="middle">Steel</text>
+        <text x="273" y="334" class="svg-label" text-anchor="middle">Carbon fibre</text>
+      </svg>
+      <div class="exhibit-text">
+        <p>A hoist rope has to hold up the car <strong>and its own weight</strong>. In a short building the rope is light compared with the car. As the hoistway gets taller, a steel rope gets so long that its own weight becomes most of what the machine lifts. Carbon-fibre rope is much lighter, so that point moves much higher.</p>
+        <label class="slider-label" for="rw-range">Rise (height of travel): <span id="rw-rise-out">500</span> m</label>
+        <input type="range" id="rw-range" class="ex-range" min="100" max="1000" step="50" value="500" aria-describedby="rw-status">
+        <ul class="ex-legend">
+          <li><span class="ex-swatch rw-sw-car"></span>Car + load</li>
+          <li><span class="ex-swatch rw-sw-steel"></span>Steel rope</li>
+          <li><span class="ex-swatch rw-sw-cf"></span>Carbon-fibre rope</li>
+        </ul>
+        <p id="rw-status" class="exhibit-status" role="status" aria-live="polite"></p>
+        <p class="ex-model">Simplified model with illustrative values, not product data: car + load 3,000 kg; steel rope set 8 kg per metre; carbon-fibre rope set 1 kg per metre; car at the bottom landing.</p>
+        <p class="fine">With the car at the bottom landing, the whole rise of rope hangs from the drive sheave on the car side, so the top of the rope carries its own weight plus the car and must still meet the required safety factor. Compensating ropes even out the weight swing across the sheave but add moving mass of their own; this model leaves out compensating ropes, travelling cables, the counterweight and roping ratio. Kone's UltraRope (2013) is a carbon-fibre-core hoisting rope aimed at very long rises; carbon fibre is far lighter than steel for comparable strength.</p>
       </div>
     </div>
   </section>
@@ -2364,6 +2945,740 @@ window.ELEVATOR_EVENTS = [
       trip.disabled = false;
       status.textContent = IDLE;
     });
+  })();
+
+  /* ---------- Exhibit: Pulley Advantage ---------- */
+  (function () {
+    if (!$("#pa-svg")) return;
+    var LOAD = 600, S = 18, R = S / 2, TOP = 50, B0 = 220, LIFT = 24, MARK0 = 120;
+    var range = $("#pa-range"), nOut = $("#pa-n"), readout = $("#pa-readout"), status = $("#pa-status");
+    var fixed = $("#pa-fixed"), moving = $("#pa-moving"), rope = $("#pa-rope"), haul = $("#pa-haul");
+    var mark = $("#pa-mark"), pullLabel = $("#pa-pull-label"), liftBtn = $("#pa-lift");
+    var n = Number(range.value), t = 0, raf = 0;
+    function svgEl(tag, attrs, parent) {
+      var e = document.createElementNS(SVGNS, tag);
+      for (var k in attrs) e.setAttribute(k, attrs[k]);
+      parent.appendChild(e);
+      return e;
+    }
+    function fmt(v) { return Number.isInteger(v) ? String(v) : v.toFixed(1); }
+    function build() {
+      // Static parts for n rope parts: fixed block, moving block, load.
+      var x0 = 150 - n * S / 2, xh = x0 + n * S, i, cx;
+      fixed.textContent = ""; moving.textContent = "";
+      svgEl("line", { x1: 150, y1: 20, x2: 150, y2: TOP - 10, "class": "shaft" }, fixed);
+      svgEl("rect", { x: x0 - 6, y: TOP - 10, width: xh - x0 + 12, height: 20, rx: 3, "class": "cw" }, fixed);
+      for (i = 1; i < n; i++) {
+        cx = x0 + (i - 1) * S + R;
+        if (i % 2 === n % 2) svgEl("circle", { cx: cx, cy: TOP, r: R - 1.5, "class": "sheave" }, fixed);
+        else svgEl("circle", { cx: cx, cy: B0, r: R - 1.5, "class": "sheave" }, moving);
+      }
+      svgEl("circle", { cx: xh - R, cy: TOP, r: R - 1.5, "class": "sheave" }, fixed);
+      var mid = n > 1 ? x0 + (n - 1) * S / 2 : x0;
+      svgEl("rect", { x: x0 - 6, y: B0 - 4, width: Math.max((n - 1) * S + 12, 12), height: 14, rx: 3, "class": "pa-block" }, moving);
+      if (n % 2 === 1) svgEl("rect", { x: x0 - 3, y: B0 - 3, width: 6, height: 6, "class": "hub" }, moving);
+      else svgEl("rect", { x: x0 - 3, y: TOP - 3, width: 6, height: 6, "class": "hub" }, fixed);
+      svgEl("line", { x1: mid, y1: B0 + 10, x2: mid, y2: B0 + 22, "class": "shaft" }, moving);
+      svgEl("rect", { x: mid - 40, y: B0 + 22, width: 80, height: 48, "class": "car" }, moving);
+      var lbl = svgEl("text", { x: mid, y: B0 + 51, "class": "svg-label", "text-anchor": "middle" }, moving);
+      lbl.textContent = LOAD + " lb load";
+      haul.setAttribute("x1", xh); haul.setAttribute("x2", xh);
+      haul.setAttribute("y1", TOP); haul.setAttribute("y2", 320);
+      mark.setAttribute("x", xh - 6);
+      pullLabel.setAttribute("x", xh + 10); pullLabel.setAttribute("y", 316);
+      pullLabel.textContent = "pull " + fmt(LOAD / n) + " lb";
+    }
+    function draw() {
+      var x0 = 150 - n * S / 2, xh = x0 + n * S, B = B0 - LIFT * t, d = "", i, xi;
+      for (i = 1; i <= n; i++) {
+        xi = x0 + (i - 1) * S;
+        d += "M" + xi + " " + TOP + " L" + xi + " " + B + " ";
+        if (i < n) {
+          // Part i joins part i+1 over a top sheave or under a bottom sheave.
+          if (i % 2 === n % 2) d += "M" + xi + " " + TOP + " A" + R + " " + R + " 0 0 1 " + (xi + S) + " " + TOP + " ";
+          else d += "M" + xi + " " + B + " A" + R + " " + R + " 0 0 0 " + (xi + S) + " " + B + " ";
+        }
+      }
+      d += "M" + (xh - S) + " " + TOP + " A" + R + " " + R + " 0 0 1 " + xh + " " + TOP;
+      rope.setAttribute("d", d);
+      moving.setAttribute("transform", "translate(0 " + (-LIFT * t).toFixed(1) + ")");
+      mark.setAttribute("y", (MARK0 + n * LIFT * t).toFixed(1));
+    }
+    function update() {
+      n = Number(range.value);
+      cancelAnimationFrame(raf);
+      t = 0;
+      nOut.textContent = n;
+      readout.textContent = "Pull needed: " + fmt(LOAD / n) + " lb (" + LOAD + " ÷ " + n + "). Rope to haul for 1 ft of lift: " + n + " ft (1 × " + n + "). Ideal, ignoring friction.";
+      liftBtn.disabled = false;
+      build(); draw();
+    }
+    function done() {
+      status.textContent = "Load raised 1 ft. With " + n + (n === 1 ? " rope part" : " rope parts") + ", you hauled " + n + " ft of rope with a " + fmt(LOAD / n) + " lb pull (ideal, ignoring friction).";
+    }
+    range.addEventListener("input", function () {
+      update();
+      status.textContent = n === 1 ? "1 rope part: the pulley only changes the direction of pull. Full weight, 600 lb." : n + " rope parts share the load: each carries " + fmt(LOAD / n) + " lb.";
+    });
+    liftBtn.addEventListener("click", function () {
+      if (t > 0) return;
+      liftBtn.disabled = true;
+      if (reduced) { t = 1; draw(); done(); return; }
+      status.textContent = "Hauling rope...";
+      var start = 0;
+      function step(ts) {
+        if (!start) start = ts;
+        t = Math.min((ts - start) / 1500, 1);
+        draw();
+        if (t < 1) raf = requestAnimationFrame(step); else done();
+      }
+      raf = requestAnimationFrame(step);
+    });
+    $("#pa-reset").addEventListener("click", function () {
+      update();
+      status.textContent = "Load resting. Move the slider to change the number of rope parts.";
+    });
+    update();
+  })();
+
+  /* ---------- Exhibit: Hydraulic Lift ---------- */
+  (function () {
+    if (!$("#hy-svg")) return;
+    var svg = $("#hy-svg"), status = $("#hy-status"), readout = $("#hy-readout"), desc = $("#hy-svg-desc");
+    var gD = $("#hy-direct"), gR = $("#hy-roped"), segBtns = document.querySelectorAll(".hy-seg-btn");
+    var mode = "direct", p = 0, dir = 0, raf = 0, last = 0;
+    var DESC = {
+      direct: "Direct-acting: the car sits on top of a plunger in a cylinder below ground. A pump unit beside the shaft has a tank, a pump and a valve, piped to the cylinder.",
+      roped: "Roped hydraulic: the cylinder stands in the pit beside the car, with a sheave on top of the plunger. Ropes anchored in the pit run up over the sheave and down to the car, so the car moves twice as far as the plunger."
+    };
+    var MSG = {
+      up: "Pump running: fluid is pushed from the tank into the cylinder, and the plunger lifts the car.",
+      down: "Down valve open: the car's own weight pushes fluid back to the tank. The pump does not run going down.",
+      top: "Car at the top landing. Pump stops; the closed valve traps the fluid and holds the car.",
+      bottom: "Car at the bottom landing. Valve closed.",
+      stop: "Stopped. Pump off and valves closed: fluid trapped in the cylinder holds the car where it is."
+    };
+    function tank(id, base, f) {
+      var r = $(id);
+      r.setAttribute("y", (base + 34 * (1 - f)).toFixed(1));
+      r.setAttribute("height", (34 * f).toFixed(1));
+    }
+    function draw() {
+      var lvl = 1 - 0.6 * p, dp = 100 * p;
+      $("#hy-move-d").setAttribute("transform", "translate(0 " + (-dp).toFixed(1) + ")");
+      $("#hy-coil-d").setAttribute("y", (334 - dp).toFixed(1));
+      $("#hy-coil-d").setAttribute("height", (4 + dp).toFixed(1));
+      $("#hy-jack-r").setAttribute("transform", "translate(0 " + (-dp).toFixed(1) + ")");
+      $("#hy-car-r").setAttribute("transform", "translate(0 " + (-2 * dp).toFixed(1) + ")");
+      $("#hy-rope-l").setAttribute("y1", (146 - dp).toFixed(1));
+      $("#hy-rope-l").setAttribute("y2", (322 - 2 * dp).toFixed(1));
+      $("#hy-rope-r").setAttribute("y1", (146 - dp).toFixed(1));
+      $("#hy-coil-r").setAttribute("y", (316 - dp).toFixed(1));
+      $("#hy-coil-r").setAttribute("height", (14 + dp).toFixed(1));
+      tank("#hy-toil-d", 187, lvl);
+      tank("#hy-toil-r", 187, lvl);
+      var pl = (10 * p).toFixed(1), car = (10 * p * (mode === "roped" ? 2 : 1)).toFixed(1);
+      readout.textContent = "Plunger up " + pl + " ft, car up " + car + " ft (example figures, " + (mode === "roped" ? "car travel = 2 × plunger" : "car travel = plunger") + ").";
+    }
+    function setDir(d) {
+      dir = d;
+      svg.classList.toggle("hy-up", d > 0);
+      svg.classList.toggle("hy-down", d < 0);
+    }
+    function loop(ts) {
+      if (!dir) return;
+      var dt = last ? Math.min(ts - last, 50) : 16;
+      last = ts;
+      p += dir * dt / 4000;
+      if (p >= 1) { p = 1; setDir(0); status.textContent = MSG.top; }
+      else if (p <= 0) { p = 0; setDir(0); status.textContent = MSG.bottom; }
+      draw();
+      if (dir) raf = requestAnimationFrame(loop);
+    }
+    function go(d) {
+      cancelAnimationFrame(raf);
+      if ((d > 0 && p >= 1) || (d < 0 && p <= 0)) { setDir(0); status.textContent = d > 0 ? MSG.top : MSG.bottom; return; }
+      if (reduced) { p = d > 0 ? 1 : 0; setDir(0); draw(); status.textContent = d > 0 ? MSG.top : MSG.bottom; return; }
+      setDir(d); last = 0;
+      status.textContent = d > 0 ? MSG.up : MSG.down;
+      raf = requestAnimationFrame(loop);
+    }
+    $("#hy-pump").addEventListener("click", function () { go(1); });
+    $("#hy-lower").addEventListener("click", function () { go(-1); });
+    $("#hy-stop").addEventListener("click", function () {
+      cancelAnimationFrame(raf); setDir(0);
+      status.textContent = p <= 0 ? MSG.bottom : p >= 1 ? MSG.top : MSG.stop;
+    });
+    function show(m) {
+      cancelAnimationFrame(raf); setDir(0);
+      mode = m;
+      segBtns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.hy === m)); });
+      gD.setAttribute("display", m === "direct" ? "inline" : "none");
+      gR.setAttribute("display", m === "roped" ? "inline" : "none");
+      desc.textContent = DESC[m];
+      status.textContent = m === "roped" ? "Roped hydraulic (1:2): the car moves twice as far as the plunger." : "Direct-acting: the car moves exactly as far as the plunger.";
+      draw();
+    }
+    segBtns.forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.hy); }); });
+    show("direct");
+    status.textContent = "Car at the bottom landing. Pump off, valves closed.";
+  })();
+
+  /* ---------- Exhibit: Escalator Anatomy ---------- */
+  (function () {
+    if (!$("#es-svg")) return;
+    var svg = $("#es-svg"), what = $("#es-what"), watch = $("#es-watch");
+    var INFO = {
+      steps: ["Steps", "Each step is a small cart on wheels running in tracks. Near each landing the tracks flatten, so the steps line up level for getting on and off.",
+        "Missing-step detection (stops the unit before a gap from a missing step reaches the comb), step upthrust device (detects a step lifted out of its track)."],
+      chain: ["Step chain", "Chains on both sides link every step and pull the whole loop around, up the incline on top and back underneath.",
+        "Broken step-chain device (stops the unit if a step chain breaks or stretches too far)."],
+      machine: ["Drive machine & brake", "In the machine space, usually under the upper landing, a motor and gearbox turn the main drive. A brake stops the escalator and holds it when the power is cut.",
+        "Overspeed and unintended-reversal protection; broken drive-chain device where a chain connects the machine to the main drive shaft."],
+      handrail: ["Handrail & handrail drive", "A moving rubber handrail travels with the steps so riders have something steady to hold. A drive in the escalator moves it.",
+        "Handrail entry (inlet) switch at each newel, where the handrail goes back inside; handrail speed monitoring (detects the handrail running out of step with the steps)."],
+      comb: ["Comb plates", "Teeth at each landing mesh with grooves in the steps, so shoes are guided off and small objects are kept from being drawn in as the steps slide under the floor.",
+        "Comb-plate impact switch (stops the unit if something jams and forces the comb plate out of position)."],
+      skirt: ["Skirt panels", "The smooth side walls right beside the steps. The small gap between step and skirt is where shoes and loose clothing can be caught.",
+        "Skirt deflector brushes (a guard that keeps feet away from the gap) and skirt obstruction switches (stop the unit if something wedges into the gap)."],
+      landing: ["Landing plates & newels", "Floor plates at each end cover the machine and turnaround spaces. The newel is the rounded end of the side wall where the handrail turns around.",
+        "The newels house the handrail entry (inlet) switches; the comb plates sit at the edge of the landing plates."],
+      estop: ["Emergency stop button", "A red button at each end that anyone can press to stop the escalator in an emergency.",
+        "Emergency stop button: opens the safety circuit, removing power from the drive so the brake applies."]
+    };
+    var btns = document.querySelectorAll(".es-btn"), parts = svg.querySelectorAll(".es-part");
+    function select(k) {
+      btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.part === k)); });
+      parts.forEach(function (g) { g.classList.toggle("es-on", g.dataset.part === k); });
+      svg.classList.add("es-sel");
+      what.textContent = INFO[k][0] + ": " + INFO[k][1];
+      watch.textContent = "Watched by: " + INFO[k][2];
+    }
+    btns.forEach(function (b) { b.addEventListener("click", function () { select(b.dataset.part); }); });
+    parts.forEach(function (g) { g.addEventListener("click", function () { select(g.dataset.part); }); });
+  })();
+
+  /* ---------- Exhibit: Doors That Watch ---------- */
+  (function () {
+    if (!$("#dr-svg")) return;
+    var svg = $("#dr-svg"), L = $("#dr-left"), R = $("#dr-right"), beamG = $("#dr-beams"), person = $("#dr-person");
+    var status = $("#dr-status"), label = $("#dr-label"), step = $("#dr-step");
+    var segs = document.querySelectorAll(".dr-seg-btn");
+    var mode = "curtain", c = 0, raf = 0, timers = [], beams = [], personIn = false;
+    var CONTACT = (126 - 62) / 88; // door edge meets the person's side
+    var TEXT = {
+      curtain: { idle: "Doors open. Light curtain watching the doorway.", label: "light curtain: beams across the doorway",
+        hit: "A beam is blocked. The doors stop and reopen without touching the person." },
+      edge: { idle: "Doors open. Safety edges on the door fronts.", label: "safety edge: reopens on contact",
+        hit: "The safety edge touches the person and is pushed in. The doors stop and reopen." }
+    };
+    for (var y = 62; y <= 252; y += 14) {
+      var ln = document.createElementNS(SVGNS, "line");
+      ln.setAttribute("y1", y); ln.setAttribute("y2", y);
+      ln.setAttribute("class", "dr-beam");
+      beamG.appendChild(ln); beams.push(ln);
+    }
+    function draw() {
+      var tx = -88 * (1 - c), a = 62 + 88 * c, b = 238 - 88 * c;
+      L.setAttribute("transform", "translate(" + tx.toFixed(1) + " 0)");
+      R.setAttribute("transform", "translate(" + (-tx).toFixed(1) + " 0)");
+      beams.forEach(function (ln) {
+        ln.setAttribute("x1", a.toFixed(1)); ln.setAttribute("x2", b.toFixed(1));
+        ln.classList.toggle("broken", personIn && Number(ln.getAttribute("y1")) >= 89);
+      });
+    }
+    function showPerson(on) { personIn = on; person.style.opacity = on ? "1" : "0"; }
+    function stop() { cancelAnimationFrame(raf); timers.forEach(clearTimeout); timers = []; }
+    function run(target, speed, onStep, done) {
+      var last = 0;
+      function f(t) {
+        var dt = last ? Math.min(t - last, 50) : 16, d = target - c, s = speed * dt;
+        last = t;
+        if (Math.abs(d) <= s) c = target; else c += d > 0 ? s : -s;
+        draw();
+        if (onStep && onStep()) return;
+        if (c === target) { if (done) done(); return; }
+        raf = requestAnimationFrame(f);
+      }
+      raf = requestAnimationFrame(f);
+    }
+    function reset() {
+      stop(); c = 0; showPerson(false); svg.classList.remove("dr-hit");
+      step.disabled = false; status.textContent = TEXT[mode].idle; draw();
+    }
+    function setMode(m) {
+      mode = m;
+      segs.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.drMode === m)); });
+      svg.classList.toggle("dr-mode-edge", m === "edge");
+      label.textContent = TEXT[m].label;
+      reset();
+    }
+    function finish() {
+      timers.push(setTimeout(function () {
+        showPerson(false);
+        status.textContent = "The person walks into the car. Doorway clear, so the doors close.";
+        run(1, 1 / 2000, null, function () {
+          step.disabled = false;
+          status.textContent = "Doors closed. Nobody was hurt. Press the button to try again.";
+        });
+      }, 1400));
+    }
+    step.addEventListener("click", function () {
+      reset(); step.disabled = true;
+      if (reduced) {
+        showPerson(true);
+        if (mode === "edge") svg.classList.add("dr-hit");
+        draw(); step.disabled = false;
+        status.textContent = TEXT[mode].hit;
+        return;
+      }
+      c = 0; status.textContent = "Doors closing...";
+      run(1, 1 / 2000, function () {
+        if (!personIn && c >= 0.15) showPerson(true);
+        var trip = mode === "curtain" ? (personIn && c >= 0.3) : c >= CONTACT;
+        if (!trip) return false;
+        if (mode === "edge") { c = CONTACT; draw(); svg.classList.add("dr-hit"); }
+        status.textContent = TEXT[mode].hit;
+        run(0, 1 / 1200, null, function () { svg.classList.remove("dr-hit"); finish(); });
+        return true;
+      });
+    });
+    segs.forEach(function (b) { b.addEventListener("click", function () { setMode(b.dataset.drMode); }); });
+    $("#dr-reset").addEventListener("click", reset);
+    setMode("curtain");
+  })();
+
+  /* ---------- Exhibit: Fire Service Recall ---------- */
+  (function () {
+    if (!$("#fr-svg")) return;
+    var svg = $("#fr-svg"), car = $("#fr-car"), dl = $("#fr-door-l"), dr = $("#fr-door-r"), smoke = $("#fr-smoke");
+    var status = $("#fr-status"), mode = $("#fr-mode"), pick = $("#fr-pick");
+    var floorBtn = $("#fr-floor-btn"), lobbyBtn = $("#fr-lobby-btn");
+    var FLOORS = 8, H = 36, BASE = 320, SPEED = 1 / 700; // floors per ms
+    var lamps = {}, cbtns = {}, i, g;
+    function bottom(f) { return BASE - (f - 1) * H; }
+    function mk(tag, attrs, parent, text) {
+      var e = document.createElementNS(SVGNS, tag);
+      for (var k in attrs) e.setAttribute(k, attrs[k]);
+      if (text) e.textContent = text;
+      parent.appendChild(e); return e;
+    }
+    var floorsG = $("#fr-floors"), btnG = $("#fr-buttons");
+    for (i = 1; i <= FLOORS; i++) {
+      if (i > 1) mk("line", { x1: 20, y1: bottom(i), x2: 200, y2: bottom(i), "class": "fr-slab" }, floorsG);
+      mk("text", { x: 26, y: bottom(i) - 12, "class": "svg-label" }, floorsG, i === 1 ? "1 Lobby" : String(i));
+      lamps[i] = mk("circle", { cx: 156, cy: bottom(i) - 18, r: 4, "class": "fr-lamp" }, floorsG);
+      var col = (i % 2) ? 252 : 284, row = 164 - Math.floor((i - 1) / 2) * 18;
+      g = mk("g", { "class": "fr-cbtn" }, btnG);
+      mk("circle", { cx: col, cy: row, r: 7 }, g);
+      mk("text", { x: col, y: row + 3, "class": "svg-label inv", "text-anchor": "middle" }, g, String(i));
+      cbtns[i] = g;
+    }
+    mk("text", { x: 206, y: bottom(2) - 14, "class": "svg-label fr-small" }, floorsG, "alternate landing");
+    mk("text", { x: 206, y: bottom(1) - 14, "class": "svg-label fr-small" }, floorsG, "designated landing");
+    for (i = 2; i <= FLOORS; i++) pick.add(new Option("Floor " + i, String(i)));
+    pick.value = "5";
+
+    var ROUTE = [6, 3, 8, 2, 7, 4, 1, 5], ri = 0;
+    var p = 5, dir = 0, state = "normal", doorsOpen = false, raf = 0, timers = [], inView = true;
+    function draw() {
+      car.setAttribute("transform", "translate(0 " + (bottom(p) - 34).toFixed(1) + ")");
+      dl.setAttribute("width", doorsOpen ? 2 : 12);
+      dr.setAttribute("x", doorsOpen ? 136 : 126); dr.setAttribute("width", doorsOpen ? 2 : 12);
+    }
+    function clearCalls() {
+      for (var f = 1; f <= FLOORS; f++) { lamps[f].classList.remove("on"); cbtns[f].classList.remove("on"); }
+    }
+    function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+    function stopAll() { cancelAnimationFrame(raf); timers.forEach(clearTimeout); timers = []; dir = 0; }
+    function moveTo(target, done) {
+      cancelAnimationFrame(raf);
+      var last = 0;
+      dir = target > p ? 1 : target < p ? -1 : 0;
+      function f(t) {
+        var dt = last ? Math.min(t - last, 50) : 16;
+        last = t;
+        if (state === "normal" && !inView) { raf = requestAnimationFrame(f); return; }
+        var s = SPEED * dt;
+        if (Math.abs(target - p) <= s) { p = target; dir = 0; draw(); done(); return; }
+        p += dir * s; draw();
+        raf = requestAnimationFrame(f);
+      }
+      if (dir === 0) { done(); return; }
+      raf = requestAnimationFrame(f);
+    }
+    function nextTrip() {
+      var t = ROUTE[ri]; ri = (ri + 1) % ROUTE.length;
+      doorsOpen = false; draw();
+      cbtns[t].classList.add("on");
+      lamps[ROUTE[ri]].classList.add("on");
+      later(function () {
+        moveTo(t, function () {
+          cbtns[t].classList.remove("on"); lamps[t].classList.remove("on");
+          doorsOpen = true; draw();
+          later(nextTrip, 1300);
+        });
+      }, 500);
+    }
+    function park(rf) {
+      doorsOpen = true; state = "parked"; draw();
+      status.textContent = "Parked at floor " + rf + " (" + (rf === 1 ? "designated" : "alternate") +
+        " landing) with doors open, out of normal service. Hall and car buttons do nothing. It waits for firefighters.";
+    }
+    function recall(sf) {
+      if (state !== "normal") return;
+      var movingDir = dir;
+      stopAll(); state = "recall";
+      var rf = sf === 1 ? 2 : 1;
+      floorBtn.disabled = lobbyBtn.disabled = pick.disabled = true;
+      clearCalls(); svg.classList.add("fr-on"); mode.textContent = "FIRE RECALL";
+      smoke.setAttribute("transform", "translate(0 " + (bottom(sf) - 14) + ")"); smoke.setAttribute("opacity", "1");
+      var head = "Smoke detected " + (sf === 1 ? "in the main lobby" : "on floor " + sf) +
+        ". All calls cancelled; the firefighter's hat lights in the car. ";
+      if (sf === 1) head += "The detector is at the designated landing, so the car goes to the alternate landing. ";
+      if (reduced) { p = rf; park(rf); return; }
+      if (doorsOpen) {
+        status.textContent = head + "The doors close and the car heads to floor " + rf + " without stopping.";
+        later(function () { doorsOpen = false; draw(); later(function () { moveTo(rf, function () { park(rf); }); }, 500); }, 600);
+      } else if (movingDir !== 0 && (rf - p) * movingDir < 0) {
+        var nxt = movingDir > 0 ? Math.ceil(p + 0.05) : Math.floor(p - 0.05);
+        nxt = Math.max(1, Math.min(FLOORS, nxt));
+        status.textContent = head + "The car was heading away, so it reverses at or before the next floor without opening its doors.";
+        moveTo(nxt, function () {
+          later(function () {
+            status.textContent = "Reversed. Returning non-stop to floor " + rf + ".";
+            moveTo(rf, function () { park(rf); });
+          }, 450);
+        });
+      } else {
+        status.textContent = head + "The car goes to floor " + rf + " without stopping.";
+        moveTo(rf, function () { park(rf); });
+      }
+    }
+    function reset() {
+      stopAll(); state = "normal"; clearCalls();
+      svg.classList.remove("fr-on"); mode.textContent = "NORMAL SERVICE"; smoke.setAttribute("opacity", "0");
+      floorBtn.disabled = lobbyBtn.disabled = pick.disabled = false;
+      p = 5; doorsOpen = false; ri = 0; draw();
+      status.textContent = "Normal service: the car is answering calls.";
+      if (!reduced) nextTrip();
+    }
+    pick.addEventListener("change", function () { floorBtn.textContent = "Smoke detected on floor " + pick.value; });
+    floorBtn.addEventListener("click", function () { recall(Number(pick.value)); });
+    lobbyBtn.addEventListener("click", function () { recall(1); });
+    $("#fr-reset").addEventListener("click", reset);
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { inView = en[0].isIntersecting; }).observe(svg);
+    reset();
+  })();
+
+  /* ---------- Exhibit: Machine Room vs. Machine-Room-Less ---------- */
+  (function () {
+    if (!$("#mr-caption")) return;
+    var caps = {
+      room: "Machine room: the hoisting machine, the controller and the governor sit in a separate room, usually above the hoistway on the roof. Ropes drop through the floor to the car and counterweight.",
+      mrl: "Machine-room-less: a compact machine is mounted inside the hoistway near the top, and the governor is in the hoistway too. The controller is commonly in a cabinet at or near the top landing. With no machine room, the building gets that space back."
+    };
+    var btns = document.querySelectorAll(".mr-seg-btn"), cap = $("#mr-caption");
+    function show(k) {
+      btns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.mrFig === k)); });
+      document.querySelectorAll(".mr-fig").forEach(function (f) { if (f.dataset.mrFig === k) f.removeAttribute("hidden"); else f.setAttribute("hidden", ""); });
+      cap.textContent = caps[k];
+    }
+    btns.forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.mrFig); }); });
+    show("room");
+  })();
+
+  /* ---------- Exhibit: Destination Dispatch (simplified model) ---------- */
+  (function () {
+    if (!$("#dd-svg")) return;
+    // Fixed scenario: floor wanted by each rider, in the order they reached the lobby.
+    var WANTS = [9, 4, 12, 4, 7, 9, 3, 12, 7];
+    var CARS = ["A", "B", "C"], CAP = 3, FLOORS = 12, FH = 20, BASE = 250, SHAFT_X = [50, 110, 170];
+    function floorTop(f) { return BASE - f * FH; }
+    function svgEl(tag, attrs, parent, text) {
+      var n = document.createElementNS(SVGNS, tag);
+      for (var k in attrs) n.setAttribute(k, attrs[k]);
+      if (text != null) n.textContent = text;
+      if (parent) parent.appendChild(n);
+      return n;
+    }
+    function uniqSorted(a) { return a.filter(function (v, i) { return a.indexOf(v) === i; }).sort(function (x, y) { return x - y; }); }
+    // Conventional: riders fill cars in arrival order. Destination: riders sorted by floor, then fill cars.
+    function plan(mode) {
+      var order = WANTS.map(function (f, i) { return i; });
+      if (mode === "dest") order.sort(function (a, b) { return WANTS[a] - WANTS[b] || a - b; });
+      return CARS.map(function (name, c) {
+        var riders = order.slice(c * CAP, c * CAP + CAP);
+        return { name: name, riders: riders, stops: uniqSorted(riders.map(function (r) { return WANTS[r]; })) };
+      });
+    }
+    var PLANS = { conv: plan("conv"), dest: plan("dest") };
+    function lastStep() { return Math.max.apply(null, PLANS[mode].map(function (c) { return c.stops.length; })); }
+
+    var gFloors = $("#dd-floors"), gMarks = $("#dd-marks"), gCars = $("#dd-cars"), gRiders = $("#dd-riders"), gDev = $("#dd-device");
+    var status = $("#dd-status"), runBtn = $("#dd-run"), stepBtn = $("#dd-step"), tbody = $("#dd-tbody");
+    var modeBtns = document.querySelectorAll(".dd-mode");
+    var mode = "conv", step = -1, timer = null, carEls = [], riderEls = [], letterEls = [], devText = null;
+
+    for (var f = 1; f <= FLOORS; f++) {
+      svgEl("line", { x1: 34, y1: floorTop(f) + FH, x2: 316, y2: floorTop(f) + FH, "class": "dd-floor" }, gFloors);
+      svgEl("text", { x: 28, y: floorTop(f) + 14, "class": "svg-label dd-small", "text-anchor": "end" }, gFloors, f);
+    }
+    SHAFT_X.forEach(function (x, c) {
+      svgEl("rect", { x: x, y: floorTop(FLOORS), width: 40, height: FLOORS * FH, "class": "dd-shaft" }, gFloors);
+      var g = svgEl("g", { "class": "dd-car" }, gCars);
+      svgEl("rect", { x: x + 5, y: floorTop(1) + 2, width: 30, height: FH - 4, "class": "car" }, g);
+      svgEl("text", { x: x + 20, y: floorTop(1) + 14, "class": "svg-label", "text-anchor": "middle" }, g, CARS[c]);
+      carEls.push(g);
+    });
+    WANTS.forEach(function (w, i) {
+      var x = 12 + i * 34;
+      var g = svgEl("g", { "class": "dd-rider" }, gRiders);
+      svgEl("rect", { x: x, y: 280, width: 28, height: 22, rx: 11, "class": "dd-token" }, g);
+      svgEl("text", { x: x + 14, y: 295, "class": "svg-label", "text-anchor": "middle" }, g, w);
+      riderEls.push(g);
+      letterEls.push(svgEl("text", { x: x + 14, y: 324, "class": "svg-label dd-letter", "text-anchor": "middle" }, gRiders, ""));
+    });
+    CARS.forEach(function (n) {
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<th scope=\"row\">Car " + n + "</th><td>&ndash;</td><td>&ndash;</td>";
+      tbody.appendChild(tr);
+    });
+
+    function drawDevice() {
+      gDev.textContent = "";
+      if (mode === "conv") {
+        svgEl("rect", { x: 248, y: 210, width: 26, height: 36, rx: 3, "class": "dd-plate" }, gDev);
+        svgEl("path", { d: "M261 220 L269 232 L253 232 Z", "class": "dd-arrow" }, gDev);
+        svgEl("text", { x: 261, y: 204, "class": "svg-label dd-small", "text-anchor": "middle" }, gDev, "up button");
+        devText = null;
+      } else {
+        svgEl("rect", { x: 228, y: 178, width: 70, height: 66, rx: 4, "class": "dd-plate" }, gDev);
+        svgEl("rect", { x: 234, y: 184, width: 58, height: 18, "class": "dd-screen" }, gDev);
+        devText = svgEl("text", { x: 263, y: 197, "class": "dd-screen-text", "text-anchor": "middle" }, gDev, "Floor?");
+        for (var r = 0; r < 3; r++) for (var c = 0; c < 4; c++) svgEl("rect", { x: 236 + c * 14, y: 208 + r * 11, width: 10, height: 8, rx: 1, "class": "dd-key" }, gDev);
+        svgEl("text", { x: 263, y: 172, "class": "svg-label dd-small", "text-anchor": "middle" }, gDev, "keypad");
+      }
+    }
+    function carFloor(car, s) { return s < 1 ? 1 : car.stops[Math.min(s, car.stops.length) - 1]; }
+    function describeStep(s) {
+      var p = PLANS[mode];
+      if (s < 0) return mode === "conv"
+        ? "Up-button mode. Nine riders wait in the lobby. Press Run or One step."
+        : "Keypad mode. Nine riders wait in the lobby. Press Run or One step.";
+      if (s === 0) return mode === "conv"
+        ? "The cars come in turn. The first three riders take Car A, the next three Car B, the last three Car C, wherever they are going."
+        : "Each rider types a floor. The display assigns a car so riders going to nearby floors share it: A gets floors " + p[0].stops.join(" and ") + ", B gets " + p[1].stops.join(" and ") + ", C gets " + p[2].stops.join(" and ") + ".";
+      var parts = p.map(function (car) { return s <= car.stops.length ? "Car " + car.name + " stops at " + car.stops[s - 1] : "Car " + car.name + " is done"; });
+      if (s < lastStep()) return "Stop " + s + ": " + parts.join("; ") + ".";
+      var tot = p.reduce(function (n, c) { return n + c.stops.length; }, 0);
+      return "Stop " + s + ": " + parts.join("; ") + ". Finished. " + (mode === "conv" ? "Up-button" : "Keypad") + " mode: " + tot + " stops in all (" + p.map(function (c) { return c.name + " " + c.stops.length; }).join(", ") + ").";
+    }
+    function fillColumn(m) {
+      var col = m === "conv" ? 1 : 2, tot = 0;
+      PLANS[m].forEach(function (car, i) {
+        tot += car.stops.length;
+        tbody.rows[i].cells[col].textContent = car.stops.length + " (floors " + car.stops.join(", ") + ")";
+      });
+      $(m === "conv" ? "#dd-total-conv" : "#dd-total-dest").textContent = tot + " stops";
+    }
+    function render() {
+      var p = PLANS[mode];
+      p.forEach(function (car, c) {
+        var fl = carFloor(car, step);
+        carEls[c].style.transform = "translateY(" + (floorTop(fl) - floorTop(1)) + "px)";
+      });
+      gMarks.textContent = "";
+      p.forEach(function (car, c) {
+        car.stops.slice(0, Math.max(0, step)).forEach(function (fl) {
+          svgEl("circle", { cx: SHAFT_X[c] + 47, cy: floorTop(fl) + FH / 2, r: 4, "class": "dd-stop" }, gMarks);
+        });
+      });
+      WANTS.forEach(function (w, i) {
+        var car = p.filter(function (cc) { return cc.riders.indexOf(i) >= 0; })[0];
+        letterEls[i].textContent = step >= 0 ? "Car " + car.name : "";
+        var arrived = step >= 1 && car.stops.indexOf(w) >= 0 && car.stops.indexOf(w) < step;
+        riderEls[i].classList.toggle("dd-gone", arrived);
+      });
+      if (devText) { var lastIdx = WANTS.length - 1, lastCar = p.filter(function (cc) { return cc.riders.indexOf(lastIdx) >= 0; })[0]; devText.textContent = step >= 0 ? WANTS[lastIdx] + " → Car " + lastCar.name : "Floor?"; }
+      status.textContent = describeStep(step);
+      stepBtn.disabled = step >= lastStep();
+      if (step >= lastStep()) fillColumn(mode);
+    }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } runBtn.textContent = "Run the cars"; }
+    function reset() { stop(); step = -1; render(); }
+    function advance() {
+      if (step < lastStep()) { step++; render(); }
+      if (step >= lastStep()) stop();
+    }
+    runBtn.addEventListener("click", function () {
+      if (timer) { stop(); return; }
+      if (step >= lastStep()) step = -1;
+      if (reduced) { step = lastStep(); render(); return; }
+      advance();
+      if (step < lastStep()) { timer = setInterval(advance, 1300); runBtn.textContent = "Pause"; }
+    });
+    stepBtn.addEventListener("click", function () { stop(); advance(); });
+    $("#dd-reset").addEventListener("click", reset);
+    modeBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        mode = b.dataset.mode;
+        modeBtns.forEach(function (o) { o.setAttribute("aria-pressed", String(o === b)); });
+        drawDevice(); reset();
+      });
+    });
+    if (reduced) $("#dd-svg").classList.add("dd-instant");
+    drawDevice(); render();
+  })();
+
+  /* ---------- Exhibit: The Sky Lobby (simplified model) ---------- */
+  (function () {
+    if (!$("#sl-svg")) return;
+    // Assumed model values (not data from any building): see the on-screen model note.
+    var ZONE = 15, CARS_PER_ZONE = 4, SECTION = 30, EXPRESS_PER_LOBBY = 2;
+    var GROUND = 316, PX = 2.4, PANELS = [{ x: 8, w: 148 }, { x: 164, w: 148 }];
+    var range = $("#sl-range"), out = $("#sl-floors-out"), status = $("#sl-status"), g = $("#sl-draw");
+    function svgEl(tag, attrs) {
+      var n = document.createElementNS(SVGNS, tag);
+      for (var k in attrs) n.setAttribute(k, attrs[k]);
+      g.appendChild(n);
+      return n;
+    }
+    // A shaft: list of segments {from, to (floors, inclusive), kind: "local"|"run"}.
+    // A leftover top band under half the normal size joins the band below it.
+    function mergeStub(bands, size) {
+      var last = bands[bands.length - 1];
+      if (bands.length > 1 && last[1] - last[0] + 1 < size / 2) { bands.pop(); bands[bands.length - 1][1] = last[1]; }
+      return bands;
+    }
+    function zonesIn(lo, hi) {
+      var z = [];
+      for (var a = lo; a <= hi; a += ZONE) z.push([a, Math.min(a + ZONE - 1, hi)]);
+      return mergeStub(z, ZONE);
+    }
+    function groundModel(n) {
+      var shafts = [];
+      zonesIn(1, n).forEach(function (z) {
+        for (var i = 0; i < CARS_PER_ZONE; i++) {
+          var segs = [];
+          if (z[0] > 1) segs.push({ from: 1, to: z[0] - 1, kind: "run" });
+          segs.push({ from: z[0], to: z[1], kind: "local" });
+          shafts.push(segs);
+        }
+      });
+      return { shafts: shafts, lobbies: [] };
+    }
+    function skyModel(n) {
+      var sections = [], lobbies = [];
+      for (var b = 1; b <= n; b += SECTION) sections.push([b, Math.min(b + SECTION - 1, n)]);
+      sections = mergeStub(sections, SECTION);
+      sections.forEach(function (sec) { if (sec[0] > 1) lobbies.push(sec[0]); });
+      var shafts = [];
+      lobbies.forEach(function (lf) {
+        for (var i = 0; i < EXPRESS_PER_LOBBY; i++) shafts.push([{ from: 1, to: lf - 1, kind: "run" }]);
+      });
+      // Local positions are shared: section s puts its k-th local car in local position k.
+      var positions = [];
+      sections.forEach(function (sec) {
+        var k = 0;
+        zonesIn(sec[0], sec[1]).forEach(function (z) {
+          for (var i = 0; i < CARS_PER_ZONE; i++, k++) {
+            if (!positions[k]) positions[k] = [];
+            if (z[0] > sec[0]) positions[k].push({ from: sec[0], to: z[0] - 1, kind: "run" });
+            positions[k].push({ from: z[0], to: z[1], kind: "local" });
+          }
+        });
+      });
+      return { shafts: shafts.concat(positions), lobbies: lobbies };
+    }
+    function stats(m) {
+      var atGround = 0, area = 0;
+      m.shafts.forEach(function (segs) {
+        if (segs[0].from === 1) atGround++;
+        segs.forEach(function (s) { area += s.to - s.from + 1; });
+      });
+      return { atGround: atGround, area: area, positions: m.shafts.length };
+    }
+    function drawPanel(m, p, n) {
+      var top = GROUND - n * PX;
+      svgEl("rect", { x: p.x, y: top, width: p.w, height: n * PX, "class": "sl-bldg" });
+      var count = m.shafts.length, pitch = Math.min(12, (p.w - 8) / count), w = pitch * 0.72;
+      var x0 = p.x + (p.w - pitch * count) / 2 + (pitch - w) / 2;
+      m.shafts.forEach(function (segs, i) {
+        segs.forEach(function (s) {
+          svgEl("rect", { x: (x0 + i * pitch).toFixed(2), y: (GROUND - s.to * PX + 0.6).toFixed(2), width: w.toFixed(2), height: ((s.to - s.from + 1) * PX - 1.2).toFixed(2), "class": s.kind === "local" ? "sl-local" : "sl-run" });
+        });
+      });
+      m.lobbies.forEach(function (lf) {
+        var y = (GROUND - (lf - 1) * PX).toFixed(2);
+        svgEl("line", { x1: p.x - 3, y1: y, x2: p.x + p.w + 3, y2: y, "class": "sl-lobby" });
+      });
+    }
+    function update() {
+      var n = Number(range.value);
+      out.textContent = n;
+      var a = groundModel(n), b = skyModel(n), sa = stats(a), sb = stats(b);
+      g.textContent = "";
+      drawPanel(a, PANELS[0], n);
+      drawPanel(b, PANELS[1], n);
+      var lobbyText = b.lobbies.length
+        ? b.lobbies.length + " sky lobb" + (b.lobbies.length > 1 ? "ies" : "y") + " (floor" + (b.lobbies.length > 1 ? "s " : " ") + b.lobbies.join(" and ").replace(/ and (?=.* and )/g, ", ") + ")"
+        : "no sky lobby needed at this height";
+      var saved = Math.round(100 * (sa.area - sb.area) / sa.area);
+      status.textContent = n + " floors. Shafts at ground level: " + sa.atGround + " if every car starts at the ground, " + sb.atGround + " with " + lobbyText +
+        ". Shaft space added up over all floors: " + sa.area + " vs " + sb.area + " shaft-floors" + (saved > 0 ? " (" + saved + "% less)." : " (no saving).") +
+        " One shaft-floor = one shaft's footprint on one floor.";
+    }
+    range.addEventListener("input", update);
+    update();
+  })();
+
+  /* ---------- Exhibit: Why Rope Weight Limits Height (simplified model) ---------- */
+  (function () {
+    if (!$("#rw-svg")) return;
+    // Illustrative model values, not product data (stated on screen).
+    var CAR_LOAD = 3000, STEEL_KG_M = 8, CF_KG_M = 1, MAX_RISE = 1000;
+    var BASE = 316, MAX_H = 270, MAX_TOTAL = CAR_LOAD + STEEL_KG_M * MAX_RISE;
+    var range = $("#rw-range"), out = $("#rw-rise-out"), status = $("#rw-status"), bars = $("#rw-bars");
+    var rope = $("#rw-rope"), car = $("#rw-car"), dim = $("#rw-dim"), dimLabel = $("#rw-dim-label");
+    var carLabel = car.nextElementSibling;
+    function svgEl(tag, attrs, text) {
+      var n = document.createElementNS(SVGNS, tag);
+      for (var k in attrs) n.setAttribute(k, attrs[k]);
+      if (text != null) n.textContent = text;
+      bars.appendChild(n);
+      return n;
+    }
+    function fmt(v) { return v.toLocaleString("en-US"); }
+    function bar(x, ropeKg, ropeCls, pct) {
+      var hCar = CAR_LOAD / MAX_TOTAL * MAX_H, hRope = ropeKg / MAX_TOTAL * MAX_H;
+      svgEl("rect", { x: x, y: (BASE - hCar).toFixed(1), width: 46, height: hCar.toFixed(1), "class": "car" });
+      svgEl("rect", { x: x, y: (BASE - hCar - hRope).toFixed(1), width: 46, height: Math.max(hRope, 0.5).toFixed(1), "class": ropeCls });
+      svgEl("text", { x: x + 23, y: (BASE - hCar / 2 + 4).toFixed(1), "class": "svg-label rw-small", "text-anchor": "middle" }, "car+load");
+      if (hRope > 18) svgEl("text", { x: x + 23, y: (BASE - hCar - hRope / 2 + 4).toFixed(1), "class": "svg-label inv", "text-anchor": "middle" }, "rope");
+      svgEl("text", { x: x + 23, y: (BASE - hCar - hRope - 6).toFixed(1), "class": "svg-label", "text-anchor": "middle" }, pct + "% rope");
+    }
+    function update() {
+      var rise = Number(range.value);
+      out.textContent = rise;
+      var steel = rise * STEEL_KG_M, cf = rise * CF_KG_M;
+      var pS = Math.round(100 * steel / (steel + CAR_LOAD)), pC = Math.round(100 * cf / (cf + CAR_LOAD));
+      // Hoistway drawing: car drops further as the rise grows (drawing scale only).
+      var carY = 36 + (rise / MAX_RISE) * 254;
+      car.setAttribute("y", carY.toFixed(1));
+      carLabel.setAttribute("y", (carY + 19).toFixed(1));
+      rope.setAttribute("y2", carY.toFixed(1));
+      dim.setAttribute("y2", carY.toFixed(1));
+      dimLabel.setAttribute("y", ((22 + carY) / 2 + 4).toFixed(1));
+      dimLabel.textContent = rise + " m";
+      bars.textContent = "";
+      bar(160, steel, "rw-steel", pS);
+      bar(250, cf, "rw-cf", pC);
+      status.textContent = "Rise " + rise + " m. Steel: " + fmt(steel) + " kg of rope under a " + fmt(CAR_LOAD) + " kg car and load, so rope is " + pS +
+        "% of what hangs from the sheave. Carbon fibre: " + fmt(cf) + " kg of rope, " + pC + "%.";
+    }
+    range.addEventListener("input", update);
+    update();
   })();
 
   applyFilters();
